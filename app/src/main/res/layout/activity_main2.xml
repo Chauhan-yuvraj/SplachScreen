@@ -3,15 +3,88 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/mainbg"
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
+
     <TextView
-        android:id="@+id/mobile"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="5mm"
+        android:textStyle="bold"
+        android:layout_margin="2mm"
+        android:textColor="@color/white"
+        android:textScaleX="1.5"
+        android:layout_height="wrap_content"
+        android:text="Please Sign Up" />
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="GO-Back"
-        android:gravity="center"
-        android:textSize="10mm"
-         />
+        app:helperText="Required*"
+        app:helperTextTextColor="#FF1100"
+        app:startIconDrawable="@drawable/person"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:background="@drawable/inputbg"
+            android:layout_margin="4mm"
+            android:layout_height="wrap_content"
+            android:hint="Enter your name" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            app:startIconDrawable="@drawable/phone"
+            app:helperText="Required*"
+            app:helperTextTextColor="#F44336"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_margin="4mm"
+                android:background="@drawable/inputbg"
+                android:layout_height="wrap_content"
+                android:hint="Mobile Number" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/email"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:background="@drawable/inputbg"
+                    android:layout_margin="4mm"
+                    android:inputType="textEmailAddress"
+                    android:layout_height="wrap_content"
+                    android:hint="Your Email address" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:text="Cancel" />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:text="Confirm" />
+                </LinearLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>

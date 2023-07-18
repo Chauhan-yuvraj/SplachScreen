@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mainbg"
     tools:context=".MainActivity">
 
 
     <ImageView
         android:id="@+id/TV"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="223dp"
         android:layout_gravity="center"
         app:srcCompat="@drawable/gitlogo"
         tools:layout_editor_absoluteX="35dp"
